@@ -1,0 +1,1 @@
+Docker 是一个开源的应用容器引擎，简单说就是让你的linux可以跑其他linux的程序，比如整个kali系统，比如打包好的LAMP加上个wordpress站点

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customShellType>
+  <funcTreeInfo>
+    <node>
+		<path>/Cmder</path>
+		<type>aspEval,aspxEval,phpEval,aspEval_Cookie,aspxEval_Cookie,phpEval_Cookie,phpAssert,phpEval_Base64,phpAssert_Base64,jspBig,pythonEval</type>
+		<info><![CDATA[]]></info>
+	</node>
+    <node>
+		<path>/FileManager</path>
+		<type>aspEval,aspxEval,phpEval,aspEval_Cookie,aspxEval_Cookie,phpEval_Cookie,phpAssert,phpEval_Base64,phpAssert_Base64,jspBig,pythonEval</type>
+		<info><![CDATA[]]></info>
+	</node>
+	<node>
+		<path>/DbManager/access</path>
+		<type>aspEval,aspEval_Cookie</type>
+		<info><![CDATA[type=access
+conn=Provider=Microsoft.Jet.OLEDB.4.0; Data Source=my.mdb; Jet OLEDB:Database Password=passwd;]]></info>
+	</node>
+	<node>
+		<path>/DbManager/mssql</path>
+		<type>aspEval,aspEval_Cookie</type>
+		<info><![CDATA[type=mssql
+conn=Provider=sqloledb;Data Source=(local);User ID=sa;Password=passwd;Initial Catalog=AdventureWorks;]]></info>
+	</node>
+	<node>
+		<path>/DbManager/access_oledb</path>
+		<type>aspxEval</type>
+		<info><![CDATA[type=access_oledb
+conn=Provider=Microsoft.Jet.OLEDB.4.0; Data Source=my.mdb; Jet OLEDB:Database Password=passwd;]]></info>
+	</node>
+	<node>
+		<path>/DbManager/mssql_oledb</path>
+		<type>aspxEval</type>
+		<info><![CDATA[type=mssql_oledb
+conn=Provider=sqloledb;Data Source=(local);User ID=sa;Password=passwd;Initial Catalog=master;]]></info>
+	</node>
+	<node>
+		<path>/DbManager/mysql_oledb</path>
+		<type>aspxEval</type>
+		<info><![CDATA[type=mysql_oledb
+conn=Provider=MySQLProv; Data Source=mydb; User Id=user; Password=passwd;]]></info>
+	</node>
+	<node>
+		<path>/DbManager/oracle_oledb</path>
+		<type>aspxEval</type>
+		<info><![CDATA[type=oracle_oledb
+conn=Provider=OraOLEDB.Oracle; Data Source=MyOracleDB; User Id=user; Password=passwd;]]></info>
+	</node>
+	<node>
+		<path>/DbManager/mysql</path>
+		<type>phpEval,phpEval_Cookie,phpAssert,phpEval_Base64,phpAssert_Base64</type>
+		<info><![CDATA[type=mysql
+conn=127.0.0.1;root;password;utf-8;]]></info>
+	</node>
+	<node>
+		<path>/DbManager/mssql_sqlsrv</path>
+		<type>phpEval,phpEval_Cookie,phpAssert,phpEval_Base64,phpAssert_Base64</type>
+		<info><![CDATA[type=mssql_sqlsrv
+conn=127.0.0.1;root;password;utf-8;]]></info>
+	</node>
+  </funcTreeInfo>
+</customShellType>
