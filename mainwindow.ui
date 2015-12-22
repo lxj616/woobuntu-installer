@@ -27,14 +27,14 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>240</y>
+      <x>220</x>
+      <y>230</y>
       <width>85</width>
       <height>27</height>
      </rect>
     </property>
     <property name="text">
-     <string>查看介绍</string>
+     <string>安装选中项</string>
     </property>
    </widget>
    <widget class="QListWidget" name="listWidget_script_category">
@@ -45,6 +45,19 @@
       <width>81</width>
       <height>192</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_update">
+    <property name="geometry">
+     <rect>
+      <x>24</x>
+      <y>230</y>
+      <width>91</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>更新所有插件</string>
     </property>
    </widget>
   </widget>

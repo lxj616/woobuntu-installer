@@ -102,3 +102,12 @@ void MainWindow::on_listWidget_script_category_currentTextChanged(const QString 
     //        iterator++;
     //    }
 }
+
+void MainWindow::on_pushButton_update_clicked()
+{
+    QStringList arg;
+    arg << "-e";
+    arg << "/bin/bash -x -c \""+QCoreApplication::applicationDirPath()+"/update.sh; exec bash\"";
+    QProcess ::execute("xfce4-terminal",arg);//调用QT里的函数
+    qDebug()<<"script/"+ui->listWidget_script_category->currentItem()->text()+ui->listWidget_script_root->currentItem()->text();
+}

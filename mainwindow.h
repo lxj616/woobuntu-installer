@@ -23,6 +23,8 @@ private slots:
 
     void on_listWidget_script_category_currentTextChanged(const QString &currentText);
 
+    void on_pushButton_update_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
