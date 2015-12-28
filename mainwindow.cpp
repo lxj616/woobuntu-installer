@@ -67,7 +67,7 @@ void MainWindow::on_pushButton_clicked()
     {
         QStringList arg;
         arg << "-e";
-        arg << "/bin/bash -x -c \""+QCoreApplication::applicationDirPath()+"/scripts/"+ui->listWidget_script_category->currentItem()->text()+"/"+ui->listWidget_script_root->currentItem()->text()+"; exec bash\"";
+        arg << "/bin/bash -x -c \""+QCoreApplication::applicationDirPath()+"/scripts/"+ui->listWidget_script_category->currentItem()->text()+"/"+ui->listWidget_script_root->currentItem()->text()+";echo \"脚本执行完毕，按回车键返回图形界面操作\";read -n 1\"";
         QProcess ::execute("xfce4-terminal",arg);//调用QT里的函数
         qDebug()<<"script/"+ui->listWidget_script_category->currentItem()->text()+ui->listWidget_script_root->currentItem()->text();
     }
