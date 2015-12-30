@@ -12,7 +12,7 @@ Name=altman
 Icon=application-default-icon
 Exec=mono /opt/woobuntu/altman/Altman.Gtk.exe
 NoDisplay=false
-Categories=woobuntu;
+Categories=woobuntu_web;
 StartupNotify=true
 Terminal=false
 EOF
