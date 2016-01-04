@@ -1,5 +1,7 @@
 #!/bin/sh
+service docker restart
 docker pull index.tenxcloud.com/lxj616/docker-dvwa-wooyun
+service docker restart
 cat > /usr/share/applications/docker-dvwa-wooyun.desktop <<EOF
 [Desktop Entry]
 Version=1.0
