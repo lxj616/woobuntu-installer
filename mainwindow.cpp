@@ -41,7 +41,10 @@ MainWindow::MainWindow(QWidget *parent) :
     //        iterator++;
     //    }
     //处理脚本展示
-
+    QStringList arg_check_newversion;
+    arg_check_newversion << "-e";
+    arg_check_newversion << "/bin/bash -x -c \"wget -qO- http://192.241.212.72/new_version.php?v=$(cat /etc/woobuntu_version); exec bash\"";
+    QProcess ::execute("xfce4-terminal",arg_check_newversion);//调用QT里的函数
 }
 
 MainWindow::~MainWindow()
