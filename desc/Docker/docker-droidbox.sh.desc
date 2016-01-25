@@ -1,0 +1,18 @@
+注意：请先安装好Docker
+下载droidbox镜像,使用方式请参见相关文档
+droidbox
+A dockerized DroidBox instance
+
+Get it from the Honeynet Project's Docker Repository
+
+Sourcecode is on Ali Ikinci's GitHub
+
+This is a ready to run Android sandbox enabling the user to run a dynamic analysis on an apk file. Create a ~/samples directory and copy you sample file in it.
+
+Usage: With readonly sample protection (recomended)
+
+docker run -it --rm -v ~/samples:/samples:ro -v ~/samples/out:/samples/out index.tenxcloud.com/lxj616/droidbox /samples/filename.apk [duration in seconds]
+
+Usage: Without readonly sample protection
+
+docker run -it --rm -v ~/samples:/samples index.tenxcloud.com/lxj616/droidbox /samples/filename.apk [duration in seconds]
