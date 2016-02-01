@@ -2,9 +2,12 @@
 #include "ui_mainwindow.h"
 #include <QDir>
 #include <QList>
+#include <QFileInfo>
 #include <QFileInfoList>
 #include <QTextCodec>
 #include <QProcess>
+
+QString which_terminal("");
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -41,10 +44,33 @@ MainWindow::MainWindow(QWidget *parent) :
     //        iterator++;
     //    }
     //处理脚本展示
+    QFileInfo gnome_terminal("/usr/bin/gnome-terminal");
+    if(gnome_terminal.exists()==true)
+    {
+        which_terminal="gnome-terminal";
+        qDebug()<< "aidouheilouaidouhei_gnome";	
+    }
+    else
+    {
+        qDebug()<< "aidouheilouaidouhei_gnome_no";
+    }
+
+    QFileInfo xfce4_terminal("/usr/bin/xfce4-terminal");
+    if(xfce4_terminal.exists()==true)
+    {
+        which_terminal="xfce4-terminal";
+        qDebug()<< "aidouheilouaidouhei_xfce4";	
+    }
+    else
+    {
+        qDebug()<< "aidouheilouaidouhei_xfce4_no";
+    }
+
     QStringList arg_check_newversion;
     arg_check_newversion << "-e";
     arg_check_newversion << "/bin/bash -x -c \"wget -qO- http://192.241.212.72/new_version.php?v=$(cat /etc/woobuntu_version); exec bash\"";
-    QProcess ::execute("xfce4-terminal",arg_check_newversion);//调用QT里的函数
+    QProcess ::execute(which_terminal,arg_check_newversion);//调用QT里的函数
+    qDebug()<< which_terminal+"aidouhe";
 }
 
 MainWindow::~MainWindow()
@@ -71,7 +97,7 @@ void MainWindow::on_pushButton_clicked()
         QStringList arg;
         arg << "-e";
         arg << "/bin/bash -x -c \""+QCoreApplication::applicationDirPath()+"/scripts/"+ui->listWidget_script_category->currentItem()->text()+"/"+ui->listWidget_script_root->currentItem()->text()+";echo \"脚本执行完毕，按回车键返回图形界面操作\";read -n 1\"";
-        QProcess ::execute("xfce4-terminal",arg);//调用QT里的函数
+        QProcess ::execute(which_terminal,arg);//调用QT里的函数
         qDebug()<<"script/"+ui->listWidget_script_category->currentItem()->text()+ui->listWidget_script_root->currentItem()->text();
     }
     else
@@ -111,6 +137,6 @@ void MainWindow::on_pushButton_update_clicked()
     QStringList arg;
     arg << "-e";
     arg << "/bin/bash -x -c \""+QCoreApplication::applicationDirPath()+"/update.sh; exec bash\"";
-    QProcess ::execute("xfce4-terminal",arg);//调用QT里的函数
+    QProcess ::execute(which_terminal,arg);//调用QT里的函数
     qDebug()<<"script/"+ui->listWidget_script_category->currentItem()->text()+ui->listWidget_script_root->currentItem()->text();
 }
