@@ -1,3 +1,3 @@
 #!/bin/sh
-apt-get update
-apt-get install eclipse -y
+sudo apt-get update
+sudo apt-get install eclipse -y

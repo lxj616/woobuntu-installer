@@ -2,5 +2,5 @@
 cd /tmp
 git clone https://github.com/LiuLang/bcloud-packages.git
 cd bcloud-packages
-dpkg -i *.deb
-apt-get -f install -y
+sudo dpkg -i *.deb
+sudo apt-get -f install -y

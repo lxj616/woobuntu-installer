@@ -1,3 +1,3 @@
 #!/bin/sh
-wget -qO- https://get.docker.com/ | sh
+sudo wget -qO- https://get.docker.com/ | sh
 

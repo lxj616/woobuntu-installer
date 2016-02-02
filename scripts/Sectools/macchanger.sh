@@ -1,2 +1,2 @@
 #!/bin/sh
-apt-get install macchanger -y
+sudo apt-get install macchanger -y

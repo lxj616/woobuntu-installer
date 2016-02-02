@@ -1,2 +1,2 @@
 #!/bin/sh
-apt-get install binwalk -y
+sudo apt-get install binwalk -y
