@@ -8,7 +8,11 @@ If you're using woobuntu , all dependencies have been met
     qmake
     make
 
-Run with root privilege
+Update on 20160202: Don't use root privilege now , all scripts will ask for sudo
+ when needed
+
+Tests showed that woobuntu-installer would support more linux distributions usin
+g gnome-terminal now , but there could be other problems ( encoding\root login\dependencies )
 
 ## Plugins development ##
 
