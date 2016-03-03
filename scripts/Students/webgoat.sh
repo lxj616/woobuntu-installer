@@ -3,7 +3,7 @@ sudo rm -rf /opt/woobuntu/webgoat
 sudo mkdir -p /opt/woobuntu/webgoat
 sudo chmod a+rw webgoat
 cd /opt/woobuntu/webgoat
-sudo wget https://github.com/WebGoat/WebGoat-Legacy/releases/download/v6.0.1/WebGoat-6.0.1-war-exec.jar -O webgoat.jar
+sudo wget https://github.com/WebGoat/WebGoat/releases/download/7.0.1/webgoat-container-7.0.1-war-exec.jar -O webgoat.jar
 cat > /tmp/webgoat.desktop <<EOF
 [Desktop Entry]
 Version=1.0
@@ -14,7 +14,7 @@ Exec=$term -e '/bin/bash -c "cd /opt/woobuntu/webgoat;java -jar webgoat.jar; exe
 NoDisplay=false
 Categories=woobuntu;
 StartupNotify=true
-Terminal=true
+Terminal=false
 EOF
 
 sudo mv /tmp/webgoat.desktop /usr/share/applications

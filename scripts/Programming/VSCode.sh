@@ -1,9 +1,9 @@
 #!/bin/sh
 sudo mkdir -p /opt/woobuntu
 cd /opt/woobuntu
-sudo wget https://az764295.vo.msecnd.net/public/0.10.3/VSCode-linux64.zip
-sudo unzip VSCode-linux64.zip
-sudo rm VSCode-linux64.zip
+sudo wget --content-disposition https://go.microsoft.com/fwlink/?LinkID=620884
+sudo unzip VSCode-linux-x64-stable.zip
+sudo rm VSCode-linux-x64-stable.zip
 cat > /tmp/vscode.desktop <<EOF
 [Desktop Entry]
 Version=1.0
