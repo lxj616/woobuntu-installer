@@ -1,7 +1,7 @@
 #!/bin/sh
 sudo rm -rf /opt/woobuntu/webgoat
 sudo mkdir -p /opt/woobuntu/webgoat
-sudo chmod a+rw webgoat
+sudo chmod a+rw /opt/woobuntu/webgoat
 cd /opt/woobuntu/webgoat
 sudo wget https://github.com/WebGoat/WebGoat/releases/download/7.0.1/webgoat-container-7.0.1-war-exec.jar -O webgoat.jar
 cat > /tmp/webgoat.desktop <<EOF
