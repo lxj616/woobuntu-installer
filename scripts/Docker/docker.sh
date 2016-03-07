@@ -1,3 +1,3 @@
 #!/bin/sh
-sudo wget -qO- https://get.docker.com/ | sh
-
+sudo apt-get update
+sudo apt-get install docker.io -y
