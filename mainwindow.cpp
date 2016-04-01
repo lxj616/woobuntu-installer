@@ -66,11 +66,6 @@ MainWindow::MainWindow(QWidget *parent) :
         qDebug()<< "aidouheilouaidouhei_xfce4_no";
     }
 
-    QStringList arg_check_newversion;
-    arg_check_newversion << "-e";
-    arg_check_newversion << "/bin/bash -x -c \"wget -qO- http://192.241.212.72/new_version.php?v=$(cat /etc/woobuntu_version); exec bash\"";
-    QProcess ::execute(which_terminal,arg_check_newversion);//调用QT里的函数
-    qDebug()<< which_terminal+"aidouhe";
 }
 
 MainWindow::~MainWindow()
